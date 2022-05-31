@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Dashboard, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <!--Iconos Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Brand</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="search here">
+                <label for="search"><span class="material-icons">pageview</span></label>
+            </div>
+            
+        </div>
+        <aside>
+            
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons">grid_view</span>
+                    <h3 class="active">Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">person</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">receipt_long</span>
+                    <h3>Orders</h3>
+                    <span class="numero">3</span>
+                </a>
+                </a>
+                <a href="#">
+                    <span class="material-icons">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="numero">5</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">area_chart</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">display_settings</span>
+                    <h3>Settings</h3>
+                </a>    
+                <a href="#">
+                    <span class="material-icons">file_upload</span>
+                    <h3>Add product</h3>
+                </a>  
+            </div>
+        </aside>
+       <!-------------------------Main-------------------------------------------->
+        <main>
+            
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons">analytics</span>
+                        
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Sales</h3>
+                            <h4>834€</h4>
+                        </div>
+                        <div class="chart">
+                            
+                            <svg>
+                                <circle cx='38' cy='38' r='36' >
+                                    
+                                </circle>
+                            </svg>
+                            <div class="number">
+                                <p>56%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Last 24 hours</small>
+                </div>
+                <div class="expenses">
+                    <span class="material-icons">running_with_errors</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Expenses</h3>
+                            <h4>978€</h4>
+                        </div>
+                        <div class="chart">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' >
+                                    
+                                </circle>
+                            </svg>
+                            <div class="number">
+                                <p>87%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Last 24 hours</small>
+                </div>
+                <div class="income">
+                    <span class="material-icons">receipt_long</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Orders</h3>
+                            <h4>235</h4>
+                        </div>
+                        <div class="chart">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' >
+                                    
+                                </circle>
+                            </svg>
+                            <div class="number">
+                                <p>32%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Last 24 hours</small>
+                </div>
+            </div>
+            <div class="orders-table">
+                <h2>Recent orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product name</th>
+                            <th>Product number</th>
+                            <th>Payment</th>
+                            <th>Shipping status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product 1</td>
+                            <td>5678</td>
+                            <td class="pending">Due</td>
+                            <td>Pending</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Product 2</td>
+                            <td>5678</td>
+                            <td>Done</td>
+                            <td>Pending</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Product 3</td>
+                            <td>4590</td>
+                            <td>Done</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Product 4</td>
+                            <td>0954</td>
+                            <td class="pending">Due</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Product 5</td>
+                            <td>3244</td>
+                            <td>Done</td>
+                            <td>Pending</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+                
+            </div>
+        </main>
+       
+    </div>
+
+    
+</body>
+</html>
