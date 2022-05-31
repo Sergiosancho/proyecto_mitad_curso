@@ -1,0 +1,359 @@
+
+/*Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+
+/*--------Reseteo-------------*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: roboto,sans-serif;
+    font-size: 0.90rem;
+    background-color:#f6f6f9;
+    
+}
+/*Layout principal con grid , bloques interiores con flexbox*/
+.container {
+width: 96%;
+margin:0 auto;
+display: grid;
+gap: 1.8rem;
+/*dos columnas , la central que ocupe todo lo disponible
+se asignan a topbar las dos  , una a aside y otra a main
+*/
+grid-template-columns: 0.25fr auto;
+grid-template-areas: 'topbar topbar'
+                     'aside main';
+
+}
+
+
+.topbar {
+    position: fixed;
+    background: white;
+    box-shadow: 0 3px 2px rgb(44, 189, 189);
+    width: 100%;
+    height: 4rem;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr  0.4fr 1fr;
+    align-items: center;
+    grid-area:topbar; 
+    z-index: 1;
+}
+.search {
+    display: flex;
+    position: relative;
+    width: 60%;
+    justify-self: center;
+    font-size: 1rem;
+    justify-items: center;
+}
+.search input {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding:10px 20px;
+    width: 100%;
+}
+.search span {
+    position:absolute;
+    right: 15px;
+    top:9px;
+    cursor: pointer;
+}
+
+a {
+    color:rgb(89, 91, 91);
+}
+img {
+    display: block;
+    width: 100%;
+}
+h2{
+    font-size: 1.7rem;
+}
+h3{
+    font-size: 0.95rem;
+}
+h4{
+    font-family: 0.8rem;
+}
+h5{
+    font-family: 0.77rem;
+}
+
+
+
+aside{
+    height: 100vh;
+    grid-area: aside;
+}
+/*aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+}*/
+
+
+
+aside .sidebar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    position: relative;
+    top: 5rem;
+}
+
+/*elementos del menú¨*/
+aside .sidebar a {
+    display: flex;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position:relative;
+    height: 3rem;
+    /*para hover*/
+    transition: all 300ms ease;
+}
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 200ms ease;
+}
+aside .sidebar a:active {
+    background: rgb(192, 188, 188);
+    margin-left: 0;
+    color:beige;
+}
+
+
+
+aside .sidebar a:hover{
+    color: rgb(46, 164, 249);
+}
+/*efecto desplazamiento horizontal en hover*/
+aside .sidebar a:hover span {
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .numero {
+    border: 0.5px solid black;
+    background-color:rgb(254, 139, 158);
+    color: white;
+    padding: 2px  10px;
+    font-size: 11px;
+    border-radius: 0.2rem;
+    margin-right: 0.7rem;
+}
+/* -------MAIN -------------*/
+main {
+    margin: 2.4rem;
+    margin-top:4rem;
+    grid-area: main;
+    
+}
+main .date{
+display: inline-block;
+border-radius: 0.3rem;
+margin-top: 1rem;
+background: white;
+padding: 0.6rem 1.2rem;
+
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+main .insights > div {
+    background-color: aliceblue;
+    padding: 1.8rem;
+    border-radius: 1.8rem;
+    margin: 1rem;
+    box-shadow: 2px 2px #484a4c;
+}
+
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+main .insights > div span {
+    background:#CDC2AE;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+main .insights > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+main .insights .chart{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+    
+    
+    
+}
+main .insights svg circle{
+    fill:none;
+    stroke: rgb(137, 230, 230);
+    stroke-width: 14;
+    stroke-linecap:round;
+    transform: translate(12px,10px);
+    stroke-dasharray:110;
+    stroke-dashoffset: 90;
+    
+    
+}
+main .insights .expenses svg circle{
+    stroke: red;
+    transform: translate(20px,10px);
+    stroke-dasharray:90;
+   
+}
+main .insights .chart .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+/*-----------Tabla-----------------*/
+main .orders-table {
+    margin-top: 2rem;
+    
+ 
+}
+main .orders-table h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .orders-table table {
+    background:#e2f7ed;
+    width:100%;
+    border-radius: 1.5rem;
+    padding:1.8rem;
+    text-align: center;
+   
+   
+}
+main .orders-table table:hover {
+    box-shadow: 0 0.3rem 0.5rem;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid grey;
+    
+}
+main table tbody  .pending {
+    color :red
+}
+
+/*quitar borde del último elemento*/
+main table tbody tr:last-child td{
+    border: none;
+}
+
+
+/*-----Responsive----*/
+
+@media only screen  and (max-width: 1050px) {
+  .container{
+      width: 94%;
+      grid-template-columns: 150px  auto;
+  }
+  aside .logo h2 {
+      display: none;
+
+  }
+  aside .sidebar h3 {
+      display: none;
+  }
+
+  aside .sidebar a {
+      width:  5.6rem;
+  }
+  main .insights {
+      grid-template-columns: 0.8fr;
+      gap: 0;
+  }
+  main .orders-table {
+      width: 94%;
+      position: absolute;
+
+      /* alinear horizontalmente elemento posicionado de forma absoluta*/
+      left: 50%;
+      transform: translateX(-50%);
+
+  }
+}
+/*----móviles-----*/
+@media only screen  and (max-width: 375px){
+    
+
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+
+    }
+    aside {
+        position: fixed;
+        left:0;
+        width: 18rem;
+        height: 100vh;
+        
+       
+
+    }
+  
+    aside .sidebar h3 {
+        display: inline;
+    }
+    aside .sidebar a {
+        width: 100%;
+        height: 3rem;
+    }
+   
+    main .orders-table {
+        position:relative;
+        width: 100%;
+    }
+    main .orders-table table {
+        width: 100%;
+        margin: 0;
+    }
+
+
+}
+    
+}
+    
